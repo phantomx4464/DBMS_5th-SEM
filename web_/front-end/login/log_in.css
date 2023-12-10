@@ -4,9 +4,9 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 body{
     background: #1E1E1E;
-
     backdrop-filter: blur(125px);
     
 }
@@ -17,22 +17,19 @@ body{
     border: white 1px solid;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
 }   
-
-
 
 .log-in{
     
-    width: 522px;
-    height: 630px;
+    width: 35%;
+    height: 50vh;
     flex-shrink: 0;
     border-radius: 40px;
     background: linear-gradient(160deg, rgba(248, 248, 248, 0.91) 1.27%, rgba(248, 248, 248, 0.10) 1.27%, rgba(248, 248, 248, 0.11) 1.27%, rgba(248, 248, 248, 0.40) 90.68%);
-
     backdrop-filter: blur(10px);
 }
+
 .head_of_login{
     padding: 10px;
     font-family: Inter;
@@ -50,8 +47,6 @@ body{
 form{
     text-align: center;
     color: #FFF;
-    
-
     font-family: Inter;
     font-size: 35px;
     font-style: normal;
@@ -94,12 +89,13 @@ button{
     border-left: 2px solid #FDC023;
 
     background: linear-gradient(160deg, rgba(248, 248, 248, 0.10) 1.27%, #FDC023 1.27%, rgba(253, 192, 35, 0.55) 1.27%, rgba(253, 192, 35, 0.22) 90.68%, #FDC023 90.68%);
-
     backdrop-filter: blur(10px);
 }
+
 .logbutton{
     margin-top: 40px;
 }
+
 
 .newuser{
     margin-top: 30px;
