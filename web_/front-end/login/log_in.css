@@ -1,107 +1,56 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-body{
-    background: #1E1E1E;
-
-    backdrop-filter: blur(125px);
-    
-}
-
-.container {
-    height: 100vh;
-    width: 100%;
-    border: white 1px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}   
-
-
-
-.log-in{
-    
-    width: 522px;
-    height: 630px;
-    flex-shrink: 0;
-    border-radius: 40px;
-    background: linear-gradient(160deg, rgba(248, 248, 248, 0.91) 1.27%, rgba(248, 248, 248, 0.10) 1.27%, rgba(248, 248, 248, 0.11) 1.27%, rgba(248, 248, 248, 0.40) 90.68%);
-
-    backdrop-filter: blur(10px);
-}
-.head_of_login{
-    padding: 10px;
-    font-family: Inter;
-    font-size: 64px;
-    font-style: italic;
-    font-weight: 900;
-    line-height: normal;
-    background: linear-gradient(180deg, #EBC258 0%, rgba(253, 192, 35, 0.26) 100%);
+.ticket {
+    font-size: 30px;
+  font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    padding-right: 80px;
+    padding-left: 50px;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
     background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-left: 140px;
+  -webkit-background-clip: text;
+  
 }
 
-form{
-    text-align: center;
-    color: #FFF;
+body{
+    background-image: url(backg.jpg);
+    background-size: 700px 1000px;
+    background-repeat: no-repeat;
+}
+p.t1{
+    color: black;
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+}
+p.f1{
+    color: black;
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    width: 1100px; 
+    height: 30px; 
+    text-align: right;
     
-
-    font-family: Inter;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
 }
-
-.Username{
-    margin-top: 50px;
-    margin-bottom: 40px;
-}
-
-input,textarea {
+.form-container button {
+    background-color: rgb(78, 166, 78);
+    color: white;
+    padding: 10px 20px;
     border: none;
-    font-size: 20px;
-    outline: none;
-    border-bottom: 1px solid #ccc;
-    background-color: transparent;
-  }
-
-
-input:focus, textarea:focus{
-    border-bottom: yellow 1px solid;
-}
-label,input{
-    margin: 20px;
+    cursor: pointer;
+    appearance: none;
 }
 
-
-button{
-   
-    font-size: 35px;
-    padding: 15px 32px;
-    text-align: center;
-    /*border-radius: 40px;*/
-    border: none;
-    border-radius: 40px;
-    border-right: 2px solid #FDC023;
-
-    border-left: 2px solid #FDC023;
-
-    background: linear-gradient(160deg, rgba(248, 248, 248, 0.10) 1.27%, #FDC023 1.27%, rgba(253, 192, 35, 0.55) 1.27%, rgba(253, 192, 35, 0.22) 90.68%, #FDC023 90.68%);
-
-    backdrop-filter: blur(10px);
+.form-container button:hover {
+    background-color: rgb(78, 166, 78);
 }
-.logbutton{
-    margin-top: 40px;
+.rounded-input {
+    width: 300px; 
+    height: 40px; 
+    font-size: 16px; 
+    border: 2px solid #333; 
+    border-radius: 20px; 
+    padding: 0 15px; 
 }
 
-.newuser{
-    margin-top: 30px;
-    background-color: transparent;
-}
+
