@@ -47,7 +47,7 @@ input{
     background-color: transparent;
     border: none;
     font-size: 18px;
-   
+    color: #00FCBF;
 }
 
 .email_label{
@@ -114,6 +114,15 @@ background-clip: text;
 
     
 }
+
+button:hover{
+    background: linear-gradient(179deg, #00ffb7 0.93%, rgba(0, 255, 179, 0.59) 114.37%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+
 p{
     margin-top: 30px;
     color: #00FCBF;
