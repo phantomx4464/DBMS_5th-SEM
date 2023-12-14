@@ -15,8 +15,10 @@ button {
     background-color: rgba(0, 0, 0, 0.0);
 }
 pre{
-    color:  #48C8FF;
-    font-size: 150%;
+    margin-top: 130px;
+    margin-bottom: 110px;
+    color:  #00ffd0;
+    font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
 }
 img.image{
@@ -26,4 +28,8 @@ img.image{
     margin-bottom: 50px;
     object-fit: cover;
 }
-
+.image:hover{
+    transition: 1s;
+    width: 400px;
+    /* height: 300px; */
+}
