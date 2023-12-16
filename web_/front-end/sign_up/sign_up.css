@@ -5,10 +5,11 @@
     font-family: sans-serif;
 }
 body {
+    background: url("./images/adrien-olichon-zyHJT71WwNU-unsplash.png") no-repeat;
     background-position: center;
-background-repeat: no-repeat;
+
 background-size: cover;
-    background-image: url("./images/adrien-olichon-zyHJT71WwNU-unsplash.png");
+   
     display: flex;
     justify-content: center;
     align-items: center;
