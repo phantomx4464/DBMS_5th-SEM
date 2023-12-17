@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User</title>
+  <link rel="stylesheet" href="user.css">
+  <link rel="icon" type="image/x-icon" href="Favicon.png">
+</head>
+<body>
+  <div>
+    <a href="./ticket.html">
+      <button id="back">Home</button>
+    </a>
+    <a href="user.html">
+      <button id="user">User</button>
+    </a>
+  </div>
+  <div id="slogan">
+    Fun Never Stops!! So do We!!
+  </div>
+  <p style="color:rgba(45, 255, 142, 1); font-size: 39px; font-family: Inter; font-weight: 400; word-wrap: break-word; margin-left: 7%;">Your Tickets</p>
+  
+  <!-- Display the ticket details div -->
+  <div id="ticketDetails" style="display: none;">
+    <p id="movieName"></p>
+    <p id="time"></p>
+    <p id="code"></p>
+  </div>
+
+  <div id="box2" style="display: none;">
+    <p>Baby's Day Out</p>
+    <p>4:00 PM</p>
+    <p>TKNO02</p>
+  </div>
+  <div id="box3" style="display: none;">
+    <p>Avengers</p>
+    <p>11:00 AM</p>
+    <p>TKNO10</p>
+  </div>
+  <!-- Add similar div elements for box4 and box5 as needed -->
+  <!-- Example: -->
+  <!-- <div id="box4" style="display: none;">
+    <p>Movie 4</p>
+    <p>Time 4</p>
+    <p>TKNO14</p>
+  </div> -->
+
+  
+
+  <script>
+    // Check if the ticket details are stored in localStorage
+    const selectedTicket = JSON.parse(localStorage.getItem("selectedTicket"));
+    if (selectedTicket) {
+      // If ticket details are present, display them
+      document.getElementById("ticketDetails").style.display = "block";
+      document.getElementById("movieName").textContent = `Movie: ${selectedTicket.movieName}`;
+      document.getElementById("time").textContent = `Time: ${selectedTicket.time}`;
+      document.getElementById("code").textContent = `Code: ${selectedTicket.code}`;
+    }
+  </script>
+</body>
+</html>

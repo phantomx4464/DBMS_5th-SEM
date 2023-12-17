@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Movies</title>
+    <link rel="stylesheet" href="ticket.css">
+    <link rel="icon" type="image/x-icon" href="../User_Ticket_Page/Favicon.png">
+</head>
+<body>
+    <div class="container_nav">
+        <div class="mytickets">
+            <button><a style="text-decoration: none;" href="./user.html">My Tickets</a></button>
+        </div>
+        <div class="nav">
+            <button><a style="text-decoration: none;" href="ticket.html">Home</a></button>
+            <button><a style="text-decoration: none;" href="mYtickets.html">Pricing</a></button>
+            <button><a style="text-decoration: none;" href="mYtickets.html">About Us</a></button>
+        </div>
+    </div>
+
+    <div class="movie">
+        <div class="m1">
+            <button id="plus">+</button>
+        </div>
+        <div class="m2">
+            <button id="plus2">+</button>
+        </div>
+        <div class="m3">
+            <button id="plus3">+</button>
+        </div>
+        <div class="m4">
+            <button id="plus4">+</button>
+        </div>
+        <div class="m5">
+            <button id="plus5">+</button>
+        </div>
+    </div> 
+
+    <script>
+        function bookTicket(movieId) {
+            fetch(`http://localhost:3006/updateTicketAndUser?movieId=${movieId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert("Ticket booked successfully!");
+                    } else {
+                        alert('Error: ${data.message}');
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("An error occurred while booking the ticket.");
+                });
+        }
+
+        document.getElementById("plus").addEventListener("click", function() {
+            bookTicket(1);
+        });
+
+        document.getElementById("plus2").addEventListener("click", function() {
+            bookTicket(2);
+        });
+
+        document.getElementById("plus3").addEventListener("click", function() {
+            bookTicket(3);
+        });
+
+        document.getElementById("plus4").addEventListener("click", function() {
+            bookTicket(4);
+        });
+
+        document.getElementById("plus5").addEventListener("click", function() {
+            bookTicket(5);
+        });
+    </script>
+</body>
+</html>
