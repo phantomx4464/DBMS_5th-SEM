@@ -5,7 +5,7 @@ const cors = require('cors');
 const { exec } = require('child_process');
 
 const app = express();
-const PORT = 3006;
+const PORT = 5500;
 
 app.use(cors());
 
@@ -13,15 +13,15 @@ const pool = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
     user: 'root',
-    password: 'Dh@nvi2123',
-    database: 'ticket',
+    password: 'password',
+    database: 'movie_ticket_management',
     port: 3306,
 });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use(express.static('view'))
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + 'ticket.html');
+    res.sendFile('/view/ticket.html',{root:__dirname});
 });
 
 app.get('/updateTicketAndUser', (req, res) => {
@@ -85,5 +85,5 @@ app.get('/updateTicketAndUser', (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
-    exec('start http://localhost:3006');
+   
 });
