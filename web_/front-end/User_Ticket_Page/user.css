@@ -55,7 +55,9 @@ body{
     margin-left: 7%;
 }
 
-#box1{
+.box1{
+    
+   
     height: 300px;
     width: 300px;
     border-radius: 35px;
@@ -82,7 +84,7 @@ body{
     background-color: transparent;
 }
 
-#box2{
+.box2{
     height: 300px;
     width: 300px;
     border-radius: 35px;
@@ -110,7 +112,7 @@ body{
 
 }
 
-#box3{
+.box3{
     height: 300px;
     width: 300px;
     border-radius: 35px;
