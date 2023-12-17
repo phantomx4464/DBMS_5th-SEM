@@ -25,17 +25,65 @@
       <p>22:30 PM</p>
       <p >TKNO04</p>
     </div>
-    <div id="box2">
+    <div id="box2" style="display: none;">
       <p >Baby's Day Out</p>
       <p>4:00 PM</p>
       <p> TKNO02</p>
     </div>
-    <div id="box3">
+    <div id="box3" style="display: none;">
       <p >Avengers</p>
       <p >11:00 AM</p>
       <p>TKNO10</p>
     </div>
 
 </body>
-<script src="ticket.js"></script>
+<script>
+  // Check if the button in index.html was clicked by looking at the localStorage variable
+  var showDiv = localStorage.getItem("showDiv1");
+
+  if (showDiv === "true") {
+      // If the button was clicked, make the hiddenDiv visible
+      document.getElementById("box1").style.display = "grid";
+
+      // Reset the localStorage variable to prevent the div from being shown again on page reload
+      localStorage.setItem("showDiv1", "false");
+  }
+ 
+  var showDiv = localStorage.getItem("showDiv2");
+
+  if (showDiv === "true") {
+      // If the button was clicked, make the hiddenDiv visible
+      document.getElementById("box2").style.display = "grid";
+
+      // Reset the localStorage variable to prevent the div from being shown again on page reload
+      localStorage.setItem("showDiv2", "false");
+  }
+  var showDiv = localStorage.getItem("showDiv3");
+
+  if (showDiv === "true") {
+      // If the button was clicked, make the hiddenDiv visible
+      document.getElementById("box3").style.display = "grid";
+
+      // Reset the localStorage variable to prevent the div from being shown again on page reload
+      localStorage.setItem("showDiv3", "false");
+  }
+  var showDiv = localStorage.getItem("showDiv4");
+
+  if (showDiv === "true") {
+      // If the button was clicked, make the hiddenDiv visible
+      document.getElementById("box1").style.display = "grid";
+
+      // Reset the localStorage variable to prevent the div from being shown again on page reload
+      localStorage.setItem("showDiv4", "false");
+  }
+  var showDiv = localStorage.getItem("showDiv5");
+
+  if (showDiv === "true") {
+      // If the button was clicked, make the hiddenDiv visible
+      document.getElementById("box1").style.display = "grid";
+
+      // Reset the localStorage variable to prevent the div from being shown again on page reload
+      localStorage.setItem("showDiv5", "false");
+  }
+</script>
 </html>
