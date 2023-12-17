@@ -39,31 +39,68 @@
             <!-- <img class='image' src='installer.jpg' alt="Interstellar" title="Interstellar" > -->
         </div>
         <div class="m2">
-            <button class="plus">
+            <button id="plus2">
                 +
             </button>
             <!-- <img class='image' src='BDO.png' alt="Baby's Day Out" title="Baby's Day Out"> -->
         </div>
         <div class="m3">
-            <button class="plus">
+            <button id="plus3">
                 +
             </button>
             <!-- <img class='image' src='horrer.jpg' alt="A Nightmare on ELM Street" title="A Nightmare on ELM Street"> -->
         </div>
             <!-- <br> -->
         <div class="m4">
-            <button class="plus">
+            <button id="plus4">
                 +
             </button>
             <!-- <img class='image' src='inseption.jpg' alt="Inception" title="Inception"> -->
         </div>
         <div class="m5">
-            <button class="plus">
+            <button id="plus5">
                 +
             </button>
             <!-- <img class='image' src='peakpx.jpg' alt="The Avengers" title="The Avengers">  -->
         </div>
     </div> 
 </body>
-<script src="ticket.js"></script>
+
+<script>
+    document.getElementById("plus").addEventListener("click", function() {
+        // When the button is clicked, set a localStorage variable to indicate that the button was clicked
+        localStorage.setItem("showDiv1", "true");
+
+        // Redirect to the home.html page
+        // window.location.href = "D:/DBMS_project/web_/front-end/user/user.html";
+    });
+    document.getElementById("plus2").addEventListener("click", function() {
+        // When the button is clicked, set a localStorage variable to indicate that the button was clicked
+        localStorage.setItem("showDiv2", "true");
+
+        // Redirect to the home.html page
+        // window.location.href = "D:/DBMS_project/web_/front-end/user/user.html";
+    });
+    document.getElementById("plus3").addEventListener("click", function() {
+        // When the button is clicked, set a localStorage variable to indicate that the button was clicked
+        localStorage.setItem("showDiv3", "true");
+
+        // Redirect to the home.html page
+        // window.location.href = "D:/DBMS_project/web_/front-end/user/user.html";
+    });
+    document.getElementById("plus4").addEventListener("click", function() {
+        // When the button is clicked, set a localStorage variable to indicate that the button was clicked
+        localStorage.setItem("showDiv4", "true");
+
+        // Redirect to the home.html page
+        // window.location.href = "D:/DBMS_project/web_/front-end/user/user.html";
+    });
+    document.getElementById("plus5").addEventListener("click", function() {
+        // When the button is clicked, set a localStorage variable to indicate that the button was clicked
+        localStorage.setItem("showDiv5", "true");
+
+        // Redirect to the home.html page
+        // window.location.href = "D:/DBMS_project/web_/front-end/user/user.html";
+    });
+</script>
 </html>
