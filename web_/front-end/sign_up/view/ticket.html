@@ -18,8 +18,10 @@
 
         <div class="nav">
             <button ><a style="text-decoration: none;" href="mYtickets.html">Home</a></button>
-            <button ><a style="text-decoration: none;" href="pricing.html">movie available</a></button>
-            <button ><a style="text-decoration: none;" href="mYtickets.html">About Us</a></button>
+            <button ><a style="text-decoration: none;" href="pricing.html">Movie Available</a></button>
+            <form action="/theatre" method="get">
+                <button >Theatre</a></button>
+            </form>
         </div>
     </div>
     <!-- <div class="content">
@@ -29,9 +31,9 @@
     <!-- </div> -->
     <div class="movie">
         <div class="m1">
-            
+            <form action="/interstellar" method="get">
                 <button id="plus">+</button>
-            
+            </form>
             <!-- <button class="plus">add</button>
 
             </div>
@@ -66,50 +68,49 @@
             <!-- <img class='image' src='peakpx.jpg' alt="The Avengers" title="The Avengers">  -->
         </div>
     </div>
-    <form action="/delete_ticket">
-        <button>delete ticket</button>
-    </form>
+    
 </body>
 
 <script>
+
        
         
-        function bookTicket(movieId) {
-            fetch(`http://localhost:5500/updateTicketAndUser?movieId=${movieId}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert("Ticket booked successfully!");
-                    } else {
-                        alert('Error: ${data.message}');
-                    }
-                })
-                .catch(error => {
-                    console.error("Error:", error);
-                    alert("An error occurred while booking the ticket.");
-                });
-        }
+        // function bookTicket(movieId) {
+        //     fetch(`http://localhost:5500/updateTicketAndUser?movieId=${movieId}`)
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             if (data.success) {
+        //                 alert("Ticket booked successfully!");
+        //             } else {
+        //                 alert('Error: ${data.message}');
+        //             }
+        //         })
+        //         .catch(error => {
+        //             console.error("Error:", error);
+        //             alert("An error occurred while booking the ticket.");
+        //         });
+        // }
 
         
-        document.getElementById("plus").addEventListener("click", function() {
-            bookTicket(1);
-        });
+        // document.getElementById("plus").addEventListener("click", function() {
+        //     bookTicket(1);
+        // });
 
-        document.getElementById("plus2").addEventListener("click", function() {
-            bookTicket(2);
-        });
+        // document.getElementById("plus2").addEventListener("click", function() {
+        //     bookTicket(2);
+        // });
 
-        document.getElementById("plus3").addEventListener("click", function() {
-            bookTicket(3);
-        });
+        // document.getElementById("plus3").addEventListener("click", function() {
+        //     bookTicket(3);
+        // });
 
-        document.getElementById("plus4").addEventListener("click", function() {
-            bookTicket(4);
-        });
+        // document.getElementById("plus4").addEventListener("click", function() {
+        //     bookTicket(4);
+        // });
 
-        document.getElementById("plus5").addEventListener("click", function() {
-            bookTicket(5);
-        });
+        // document.getElementById("plus5").addEventListener("click", function() {
+        //     bookTicket(5);
+        // });
     </script>
 </script>
 </html>

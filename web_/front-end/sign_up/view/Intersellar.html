@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Interstellar</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='Movies.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./Movies.css'>
     <link rel="icon" type="image/x-icon" href="..\User_Ticket_Page\Favicon.png">
 </head>
 <body style="background-image: url(Interstellar_dark.png); background-size: cover;">
@@ -18,11 +18,29 @@
          <p style="font-size: 30px;">Interstellar</p>
             <img src="installer.jpg" alt="" width="250px" height="250px" style="margin-left: 27%;">
             <p>Price: 350/-</p>
-            <button class="buyNow" onclick="print()">BUY NOW</button>
+            <button id="plus" >BUY NOW</button>
     </div>
         </div>
-    <script> function print(){
-        window.alert("Ticket Booked!!");
-    }</script>
+    <script> function bookTicket(movieId) {
+        fetch(`http://localhost:5500/updateTicketAndUser?movieId=${movieId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Ticket booked successfully!");
+                } else {
+                    alert('Error: ${data.message}');
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred while booking the ticket.");
+            });
+    }
+
+    
+    document.getElementById("plus").addEventListener("click", function() {
+        bookTicket(1);
+    });
+    </script>
 </body>
 </html>

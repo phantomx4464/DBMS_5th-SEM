@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('view'))
 app.get('/', (req, res) => {
+    
     res.sendFile('/view/ticket.html',{root:__dirname});
 });
 

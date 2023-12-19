@@ -79,6 +79,11 @@ app.get('/pricing', (req, res) => {
   res.sendFile('/view/pricing.html',{root:__dirname});
 });
 
+app.get('/interstellar', (req, res) => {
+  res.sendFile('/view/intersellar.html',{root:__dirname});
+});
+
+
 app.get('/updateTicketAndUser', (req, res) => {
   console.log('Received request for /updateTicketAndUser');
 
@@ -229,6 +234,59 @@ app.post('/delete', (req, res) => {
     
   });
 });
+
+app.get('/theatre', (req, res) => {
+  // Fetch and display movies from the database
+  const query = 'SELECT * FROM THEATRE';
+  connection.query(query, (err, results) => {
+    if (err) {
+      console.error('Error executing MySQL query: ' + err.stack);
+      res.status(500).send('Internal Server Error');
+      return;
+    }
+
+    // Render HTML with movie list and delete buttons
+    const html = `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movies</title>
+      </head>
+      <body>
+        <h1>Movies</h1>
+        <ul>
+          ${results.map(THEATRE => `
+            <li>${THEATRE.THEATRE_ID} ${THEATRE.movie_name} ${THEATRE.THEATRE_NAME} ${THEATRE.LOCATION} 
+              
+            </li>`).join('')}
+        </ul>
+      </body>
+      </html>
+    `;
+
+    res.send(html);
+  });
+});
+
+// Handle the delete button click and delete from MySQL table
+// app.post('/delete', (req, res) => {
+//   const movieId = req.body.id;
+
+//   // Perform database query to delete movie information
+//   const query = 'DELETE FROM user_tickets WHERE ticket_id = ?';
+//   connection.query(query, [movieId], (err, result) => {
+//     if (err) {
+//       console.error('Error executing MySQL query: ' + err.stack);
+//       res.status(500).send('Internal Server Error');
+//       return;
+//     }
+
+//     console.log('Movie deleted from the database');
+    
+//   });
+// });
 
 // Start the server
 app.listen(port, () => {
